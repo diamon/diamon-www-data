@@ -1,0 +1,119 @@
+hosted:
+  - id: lttng
+    logo-id: lttng
+    name: LTTng
+    sub: What is LTTng?
+    desc: >
+      The LTTng project aims at providing highly efficient tracing
+      tools for Linux. Its tracers help tracking down performance
+      issues and debugging problems involving multiple concurrent
+      processes and threads.
+    links:
+      - title: LTTng Website
+        url: http://lttng.org/
+      - title: LTTng Downloads
+        url: http://lttng.org/download
+      - title: LTTng Documentation
+        url: http://lttng.org/documentation
+  - id: tc
+    logo-id: tc
+    name: Trace Compass
+    sub: What is Trace Compass?
+    desc: >
+      The Trace Compass project is an extensible trace viewer and
+      analyzer. It reads and correlates CTF traces (including LTTng),
+      as well as text logs.
+    links:
+      - title: Trace Compass Website
+        url: http://tracecompass.org/
+      - title: Eclipse Project Page
+        url: https://eclipse.org/tracecompass
+  - id: minicoredumps
+    name: Minicoredumper
+    sub: What are mini core dumps?
+    desc: >
+      Core dumps can be too large for permanent storage on embedded
+      systems. The goal of the mini core dump project is to provide
+      a configurable excerpt of a full core dump. That allows space
+      savings and eventually the storage of multiple dumps which
+      enhances the debugability because it allows the observation
+      of patterns.
+    links:
+      - title: Minicoredumper Website
+        url: https://www.linutronix.de/minicoredumper/
+      - title: Minicoredumper Git Repository
+        url: http://git.linuxfoundation.org/?p=diamon/minicoredumper.git;
+      - title: Minicoredumper Bug Tracker
+        url: 'https://bugs.linuxfoundation.org/buglist.cgi?product=Diamon&component=minicoredumper'
+      - title: Minicoredumper Mailing List
+        url: https://linutronix.de/mailman/listinfo/minicoredumper
+  - id: ctf
+    name: Common Trace Format
+    sub: Goal of the CTF specification
+    desc: >
+      The common trace format specifies a trace format based on the
+      requirements of the industry (through collaboration with the
+      Multicore Association) and the Linux community. We propose a
+      subset of CTF for use with Linux as a reference. The format is
+      flexible to address kernel, userspace and hardware tracing
+      use-cases. The correlation of traces across multiples domains
+      or multiple hosts is possible. By using a standard format, tools
+      can be reused with traces providing from diverses sources.
+    links:
+      - title: CTF Website
+        url: http://diamon.org/ctf/
+      - title: Multicore Association Tools Infrastructure Working Group
+        url: http://www.multicore-association.org/workgroup/tiwg.php
+  - id: bt
+    name: Babeltrace
+    sub: What is Babeltrace?
+    desc: >
+      The Babeltrace project provides trace read and write libraries,
+      as well as a trace converter. Plugins can be created for any trace
+      format to allow its conversion to/from another trace format.
+      The main format expected to be converted to/from is the Common
+      Trace Format (CTF). The default input format of the “babeltrace”
+      command is CTF, and its default output format is a human-readable
+      text log. The “babeltrace-log” command converts from a text log to
+      a CTF trace.
+    links:
+      - title: Babeltrace Website
+        url: http://diamon.org/babeltrace
+      - title: Babeltrace Git Repository
+        url: http://git.linuxfoundation.org/?p=diamon/babeltrace.git
+      - title: Babeltrace Bug Tracker
+        url: 'https://bugs.linuxfoundation.org/buglist.cgi?product=Diamon&component=Babeltrace'
+      - title: Babeltrace Manpage
+        url: http://lttng.org/files/doc/man-pages/man1/babeltrace.1.html
+      - title: Babeltrace Python Bindings Documentation
+        url: http://diamon.org/babeltrace/docs/python/
+potential:
+  - id: hw-tracing
+    name: Hardware assisted tracing
+    sub: What is hardware assisted tracing?
+    desc: >
+      Hardware vendors now provide hardware tracing mechanisms which are
+      currently partially supported by the mainline Linux kernel.
+      Reaching an agreement amongst vendors on a set of common
+      interfaces would be a good step towards improving hardware
+      tracing support under Linux.
+  - id: ctf-gdb
+    name: CTF tracepoints in GDB
+    sub: What is GDB doing with CTF?
+    desc: >
+      GDB supports saving tracing data in the Common Trace Format. By
+      saving to a standard trace format, users are able to leverage
+      existing tracing tools.
+    links:
+      - title: GDB documentation for trace files
+        url: http://sourceware.org/gdb/onlinedocs/gdb/Trace-Files.html
+  - id: common-trace-clock
+    name: Common trace clock
+    sub: What is Common trace clock?
+    desc: >
+      The goal of this project is to add support to the Linux kernel to
+      provide a correlated time between the kernel instrumentation and
+      userspace in order to have a comprehensive kernel instrumentation
+      coverage which can be correlated to user level traces. By
+      providing a common clock, tools such as Perf, Ftrace, SystemTAP
+      and LTTng can benefit from this enhancement.
